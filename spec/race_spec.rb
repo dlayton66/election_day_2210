@@ -1,7 +1,7 @@
 require './lib/race'
 require './lib/candidate'
 
-RSpec.describe do
+RSpec.describe Race do
   let(:race) {Race.new("Texas Governor")}
 
   it 'has an office' do
@@ -12,7 +12,7 @@ RSpec.describe do
     expect(race.candidates).to eq []
   end
 
-  describe '#regiser_candidate!' do
+  describe '#register_candidate!' do
     it 'adds a candidate to candidates array, then returns that candidate' do
       candidate1 = race.register_candidate!({name: "Diana D", party: :democrat})
       candidate2 = race.register_candidate!({name: "Roberto R", party: :republican})
