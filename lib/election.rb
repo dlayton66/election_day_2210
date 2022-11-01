@@ -17,4 +17,14 @@ class Election
     end
     candidates
   end
+
+  def vote_counts
+    vote_counts = {}
+    races.each do |race|
+      race.candidates.each do |candidate|
+        vote_counts[candidate.name] = candidate.votes
+      end
+    end
+    vote_counts
+  end
 end
