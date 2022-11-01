@@ -26,6 +26,8 @@ RSpec.describe Election do
 
   describe '#candidates' do
     it 'returns an array of all candidates across all races' do
+      election.add_race(race1)
+      election.add_race(race2)
       candidate1 = race1.register_candidate!({name: "Diana D", party: :democrat})
       candidate2 = race1.register_candidate!({name: "Roberto R", party: :republican})
       candidate3 = race2.register_candidate!({name: "Diego D", party: :democrat})

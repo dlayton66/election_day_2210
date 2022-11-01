@@ -7,6 +7,14 @@ class Election
   end
 
   def add_race(race)
-    races << race
+    @races << race
+  end
+
+  def candidates
+    candidates = []
+    races.each do |race|
+      candidates += race.candidates
+    end
+    candidates
   end
 end
