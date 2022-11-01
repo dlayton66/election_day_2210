@@ -10,6 +10,6 @@ RSpec.describe Election do
   end
 
   it 'stores election races' do
-    expect(races).to eq []
+    expect(election.races).to eq []
   end
 end
